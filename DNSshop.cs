@@ -26,11 +26,11 @@ namespace AutomatedTests
         public void TestPriceFilter()
         {
             driver.FindElement(By.XPath("//*[@class='menu-desktop__root']//a[contains(text(), 'ноутбуки')]")).Click();
-            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'от 12999']")).Clear();
-            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'от 12999']")).SendKeys("20000");
-            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'до 334999']")).Clear();
-            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'до 334999']")).SendKeys("40000");
-            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'до 334999']")).SendKeys(Keys.Enter);
+            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'от 12999')]")).Clear();
+            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'от 12999')]")).SendKeys("20000");
+            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'до 334999')]")).Clear();
+            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'до 334999')]")).SendKeys("40000");
+            driver.FindElement(By.XPath("//*[contains(@class, 'ui-collapse__content')]//input[contains(@placeholder, 'до 334999')]")).SendKeys(Keys.Enter);
             new WebDriverWait(driver, TimeSpan.FromSeconds(5))
                 .Until(x => driver.FindElements(By.CssSelector(".catalog-preloader__spin")).Count == 0);
         
